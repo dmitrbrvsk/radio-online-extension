@@ -1,0 +1,221 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+body {
+  background: #fafafa;
+  font: 14px 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+.ultima-extension {
+  width: 310px;
+  height: 405px;
+}
+
+.logo-extension {
+  width: 182px;
+  height: 33px;
+  background-image: url('../img/ultima-logo.png');
+  margin:  32px auto 0;
+}
+
+.player {
+  position: absolute;
+  top:  127px;
+  left: 50%;
+  width: 245px;
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  text-align: center;
+}
+
+.player .player-btn {
+  position: relative;
+  width: 40px;
+  height: 44px;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.player .player-btn .pb-left,
+.player .player-btn .pb-right {
+  height: 100%;
+  width: 50%;
+  background-color: #4f4f4f;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+
+.player .player-btn .pb-left {
+  float: left;
+}
+
+.player .player-btn .pb-right {
+  float: right;
+  transform:  translateX(-1px);
+}
+
+.player .player-btn .pb-triangle-1 {
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+
+.player .player-btn .pb-triangle-2 {
+  -moz-transform: translate(0, 50%);
+  -ms-transform: translate(0, 50%);
+  -webkit-transform: translate(0, 50%);
+  transform: translate(0, 50%);
+}
+
+.player .player-btn .pb-triangle-1,
+.player .player-btn .pb-triangle-2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  width: 0;
+  height: 0;
+  border-right: 40px solid #fafafa;
+  border-top: 22px solid transparent;
+  border-bottom: 22px solid transparent;
+  -moz-transition: -moz-transform 0.2s ease;
+  -o-transition: -o-transform 0.2s ease;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+}
+
+.player .player-btn.player-btn-pause .pb-left,
+.player .player-btn.player-btn-pause .pb-right {
+  width: 35%;
+}
+
+.player .player-btn.player-btn-pause .pb-triangle-1 {
+  -moz-transform: translate(0, -100%);
+  -ms-transform: translate(0, -100%);
+  -webkit-transform: translate(0, -100%);
+  transform: translate(0, -100%);
+}
+
+.player .player-btn.player-btn-pause .pb-triangle-2 {
+  -moz-transform: translate(0, 100%);
+  -ms-transform: translate(0, 100%);
+  -webkit-transform: translate(0, 100%);
+  transform: translate(0, 100%);
+}
+
+.volume-player {
+  position: absolute;
+  left: 50%;
+  bottom: 40px;
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  width: 165px;
+  height: 2px;
+  background-color: #bcbcbc;
+  cursor: pointer;
+}
+
+#slider .ui-slider-handle {
+  width: 10px;
+  height: 10px;
+  background: #616161;
+  position: absolute;
+  top: -4px;
+  outline: none;
+  z-index: 200;
+  -moz-border-radius: 4.5px;
+  -webkit-border-radius: 4.5px;
+  border-radius: 4.5px;
+  -moz-transition: -moz-transform 0.3s;
+  -o-transition: -o-transform 0.3s;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+}
+
+#slider:hover .ui-slider-range,
+#slider:hover .ui-slider-handle {
+  background-color: #212121;
+}
+
+#slider:hover .ui-slider-handle {
+  transform: scale(1.5, 1.5);
+}
+
+.ui-widget-header {
+  background: #606060 no-repeat left;
+  height: 2px;
+  left: 1px;
+  top: 0;
+  position: absolute;
+}
+
+.volume-player-left {
+  position: absolute;
+  left: 32px;
+  bottom: 32px;
+  width: 16px;
+  height: 18px;
+  background-image: url('../img/volume-left.png');
+}
+
+.volume-player-right {
+  position: absolute;
+  right: 32px;
+  bottom: 32px;
+  width: 21px;
+  height: 18px;
+  background-image: url('../img/volume-right.png');
+}
+
+.broadcast {
+  margin-top: 62px;
+  color: #2095F2;
+  letter-spacing: 1px;
+  font-size: 0.85714em;
+  font-weight: 500;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.player-track {
+  line-height: 24px;
+}
+
+.player-track-artist,
+.player-track-title {
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 1.14286em;
+}
+
+.player-track-title {
+  font-weight: 300;
+}
